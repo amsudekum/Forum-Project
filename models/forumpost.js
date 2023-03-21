@@ -24,11 +24,11 @@ Forumpost.init(
             allowNull: false, 
             defaultValue: DataTypes.NOW,
         },
-        user_id: {
+        user_name: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'id',
+                key: 'username',
             },
         }, 
     },
