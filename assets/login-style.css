@@ -22,8 +22,8 @@
   .login-form h4 {
     color: var(--white);
     margin-bottom: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
   }
   
   .login-form label {
@@ -31,6 +31,7 @@
     color: var(--grey);
     letter-spacing: 1px;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 1rem;
   }
   
@@ -60,6 +61,7 @@
     width: 100%;
     padding: 1rem;
     transition: all ease .4s;
+    font-family: 'Montserrat', sans-serif;
   }
   
   .login-form-button:hover {
