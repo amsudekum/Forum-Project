@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display:wght@800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg">
+        <div class="nav-logo">
+            <h1>borough</h1>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#tags">Tags</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#users">Users</a>
+            </li>
+        </ul>
+        <form class="navbar-nav ml-auto search-bar form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <button class="register btn btn-outline-light my-2 my-sm-0" type="submit">Register</button>
+        <button class="login btn btn-outline-light my-2 my-sm-0" type="submit">Login</button>
+    </div>
+    <div class="header">
+        <ul class="header-links">
+            <li class="latest"><a href="#latest">Latest</a></li>
+            <li class="unanswered"><a href="#unanswered">Unanswered</a></li>
+            <li class="trending"><a href="#trending">Trending</a></li>
+            <li class="popular-week"><a href="#popular-week">Popular This Week</a></li>
+            <li class="popular-month"><a href="#popular-month">Popular This Month</a></li>
+        </ul>
+    </div>
+    <div class="body-wrapper">
+        <div class="left-content-wrapper">
+            <div class="forum-post-wrapper">
+                <div class="post-column">
+                    <div class="user-photo">
+                        <img src="PLACEHOLDER" alt="user profile photo" max-width="200px">
+                    </div>
+                </div>
+                <div class="post column">
+                    <div class="post-content-wrapper">
+                        <div class="post-title">
+                            <h2>Lorem Ipsum</h2>
+                        </div>
+                        <ul class="content-sections">
+                            <li class="answers"><a href="#answers">Answers</a></li>
+                            <li class="votes"><a href="#votes">Votes</a></li>
+                            <li class="views"><a href="#views">Views</a></li>
+                        </ul>
+                        <ul class="content-tags">
+                            <li class="tag1"><a href="#tag1">example-tag1</a></li>
+                            <li class="tag2"><a href="#tag2">example-tag2</a></li>
+                            <li class="tag3"><a href="#tag3">example-tag3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="post-column">
+                    <div class="post-time">
+                        <h6>Asked 1h ago</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-content-wrapper">
+            <div class="advertisement">
+                <!-- INSERT AD STUFF HERE -->
+            </div>
+            <div class="top-users">
+                <div class="top-user-header">
+                    <h3>Top Users of the Week</h3>
+                </div>
+                <div class="top-user-wrapper">
+                    <div class="top-user-column">
+                        <div class="top-user-photo">
+                            <img src="PLACEHOLDER" alt="user profile photo" max-width="200px">
+                        </div>
+                    </div>
+                    <div class="top-user-column">
+                        <div class="top-user-username">
+                            <h5>Username</h5>
+                        </div>
+                        <div class="top-user-join-date">
+                            <p>Since 2023</p>
+                        </div>
+                    </div>
+                    <div class="top-user-column">
+                        <div class="top-user-post-award">
+                            <img src="PLACEHOLDER STAR" alt="user star" max-width="100px">
+                            <p>2,083</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

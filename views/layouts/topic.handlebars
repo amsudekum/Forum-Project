@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{siteName}} Forum</title>
+</head>
+<body>
+	<header>
+		<h1>{{siteName}} Forum</h1>
+		<nav>
+			<ul>
+				{{#each topics}}
+				<li><a href="#">{{this}}</a></li>
+				{{/each}}
+			</ul>
+		</nav>
+	</header>
+	<main>
+		{{#each posts}}
+		<article>
+			<h2>{{title}}</h2>
+			<p>Posted on {{date}}</p>
+		</article>
+		{{/each}}
+	</main>
+</body>
+</html>
