@@ -1,16 +1,26 @@
 const User = require('./user');
-const Project = require('./reply');
-const Project = require('./reply');
+const forumpost = require('./reply');
+const reply = require('./forumpost');
 
-User.hasMany(Project, {
-  foreignKey: 'user_id',
+User.hasMany(forumpost, {
+  foreignKey: 'author',
+  onDelete: 'CASCADE'
+});
+forumpost.hasMany(reply, {
+  foreignKey: 'post_id',
   onDelete: 'CASCADE'
 });
 
-Project.belongsTo(User, {
-  foreignKey: 'user_id'
+forumpost.belongsTo(User, {
+  foreignKey: 'author'
+});
+reply.belongsTo(User, {
+  foreignKey: 'author'
+});
+reply.belongsTo(forumpost, {
+  foreignKey: 'post_id'
 });
 
-module.exports = { User, Project };
+module.exports = { User, forumpost };
 
 
