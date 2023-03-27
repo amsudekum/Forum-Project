@@ -15,6 +15,10 @@ Forumpost.init(
             type: DataTypes.STRING,
             allowNull: false,
         },      
+        topic: {   //name of the post author
+            type: DataTypes.STRING,
+            allowNull: false,
+        },      
         content: { //the actual post itself, cause we don't want them to publish an empty post?
             type: DataTypes.STRING,
             allowNull: false,
