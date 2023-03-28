@@ -31,8 +31,8 @@ Forumpost.init(
         author: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
-                key: 'name',
+                model: 'User',
+                key: 'id',
             },
         }, 
 

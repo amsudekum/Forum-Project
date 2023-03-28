@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "post_title": "My First Post",
+    "topic": "General",
+    "content": "Hello, World!",
+    "date_created": "2022-01-01T00:00:00Z",
+    "author": 1
+  },
+  {
+    "id": 2,
+    "post_title": "How to Use Sequelize",
+    "topic": "Backend",
+    "content": "Here's a tutorial on how to use Sequelize with Node.js.",
+    "date_created": "2022-01-02T12:34:56Z",
+    "author": 2
+  },
+  {
+    "id": 3,
+    "post_title": "My Favorite IDE",
+    "topic": "IDEs",
+    "content": "I really like using VSCode for web development.",
+    "date_created": "2022-01-03T23:59:59Z",
+    "author": 3
+  }
+]
