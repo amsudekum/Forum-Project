@@ -1,13 +1,15 @@
-{{#if Forumposts.length}}
-{{#each Forumposts as |Forumpost|}}
-<div class="post-card">
-    <div class="title-card">
-        <p>{{Forumpost.title}}</p>
-        <p>{{Forumpost.date_created}}</p>
+{{#if forumposts.length}}
+  {{#each forumposts}}
+    <div class="post-card">
+      <div class="title-card">
+        <p>{{this.topic}}</p>
+        <p>{{this.date_created}}</p>
+      </div>
+      <div class="description-card">
+        <p>{{this.content}}</p>
+      </div>
     </div>
-    <div class="description-card">
-        <p>{{Forumpost.content}}</p>
-    </div>
-</div>
-{{/each}}
-  {{/if}}
+  {{/each}}
+{{else}}
+  <p>No posts found.</p>
+{{/if}}

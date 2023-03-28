@@ -69,3 +69,26 @@ font-family: 'Montserrat', sans-serif; */
 .topic-text{
     color: var(--blue);
 }
+.post-card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.title-card{
+    display: flex;
+    justify-content: space-between;
+    background-color:bisque;
+    width: 60vw;
+    margin-top: 20px;
+}
+.description-card{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:bisque;
+    width: 60vw;
+    margin-top: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.293);
+}

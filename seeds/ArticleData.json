@@ -20,7 +20,7 @@
   },
   {
     "post_title": "Jane Smith",
-    "topic": "Creative Center",
+    "topic": "CreativeCenter",
     "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "date_created": "2023-03-31T08:00:00.000Z"
   },
@@ -44,7 +44,7 @@
   },
   {
     "post_title": "Jane Smith",
-    "topic": "IDE's",
+    "topic": "IDEs",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "date_created": "2023-04-04T08:00:00.000Z"
   },
