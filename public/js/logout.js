@@ -11,6 +11,6 @@ const logout = async () => {
     }
   };
   
-//   TODO: replace queryselector with correct html element
-//   document.querySelector('#logout').addEventListener('click', logout);
+
+  document.querySelector('#logout').addEventListener('click', logout);
   

@@ -1,5 +1,4 @@
-
-  const topicLinks = document.querySelectorAll('.topic');
+const topicLinks = document.querySelectorAll('.topic');
 
 topicLinks.forEach((link) => {
   link.addEventListener('click', async (event) => {
