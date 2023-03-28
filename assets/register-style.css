@@ -1,0 +1,72 @@
+
+:root {
+    --grey: #C2CCCD;
+    --white: #F7F7F7;
+    --blue: #5E7B83;
+    --gold: #D2AF6F;
+    --copper: #9D7B56;
+}
+
+.form-wrapper {
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.register-form {
+    padding: 1rem 1.5em;
+    border-radius: .5rem;
+    background-color: var(--blue);
+  }
+  
+  .register-form h4 {
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .register-form label {
+    text-transform: uppercase;
+    color: var(--grey);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+  }
+  
+  .register-form input {
+    color: var(--white);
+  }
+  
+  .register-form input:focus {
+    opacity: .8;
+  }
+  
+  .register-form-username,
+  .register-form-password {
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+  }
+  
+  .register-form-button {
+    border-radius: 30px;
+    border: 1px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .register-form-button:hover {
+    background-color: var(--copper);
+    border-color: var(--copper);
+  }
+  
+  
