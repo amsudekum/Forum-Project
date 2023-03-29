@@ -1,26 +1,63 @@
+
 [
   {
-    "id": 1,
-    "post_title": "My First Post",
-    "topic": "General",
-    "content": "Hello, World!",
-    "date_created": "2022-01-01T00:00:00Z",
-    "author": 1
+    "post_title": "John Doe",
+    "topic": "Frontend",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "date_created": "2023-03-28T08:00:00.000Z"
   },
   {
-    "id": 2,
-    "post_title": "How to Use Sequelize",
+    "post_title": "Jane Smith",
     "topic": "Backend",
-    "content": "Here's a tutorial on how to use Sequelize with Node.js.",
-    "date_created": "2022-01-02T12:34:56Z",
-    "author": 2
+    "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "date_created": "2023-03-29T08:00:00.000Z"
   },
   {
-    "id": 3,
-    "post_title": "My Favorite IDE",
+    "post_title": "John Doe",
+    "topic": "General",
+    "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "date_created": "2023-03-30T08:00:00.000Z"
+  },
+  {
+    "post_title": "Jane Smith",
+    "topic": "CreativeCenter",
+    "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "date_created": "2023-03-31T08:00:00.000Z"
+  },
+  {
+    "post_title": "John Doe",
+    "topic": "Python",
+    "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "date_created": "2023-04-01T08:00:00.000Z"
+  },
+  {
+    "post_title": "Jane Smith",
+    "topic": "Javascript",
+    "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "date_created": "2023-04-02T08:00:00.000Z"
+  },
+  {
+    "post_title": "John Doe",
+    "topic": "Rust",
+    "content": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+    "date_created": "2023-04-03T08:00:00.000Z"
+  },
+  {
+    "post_title": "Jane Smith",
     "topic": "IDEs",
-    "content": "I really like using VSCode for web development.",
-    "date_created": "2022-01-03T23:59:59Z",
-    "author": 3
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date_created": "2023-04-04T08:00:00.000Z"
+  },
+  {
+    "post_title": "John Doe",
+    "topic": "French",
+    "content": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+    "date_created": "2023-04-05T08:00:00.000Z"
+  },
+  {
+    "post_title": "Jane Smith",
+    "topic": "Spanish",
+    "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "date_created": "2023-04-06T08:00:00.000Z"
   }
 ]

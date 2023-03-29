@@ -1,0 +1,15 @@
+{{#if forumposts.length}}
+  {{#each forumposts}}
+    <div class="post-card">
+      <div class="title-card">
+        <p>{{this.topic}}</p>
+        <p>{{this.date_created}}</p>
+      </div>
+      <div class="description-card">
+        <p>{{this.content}}</p>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <p>No posts found.</p>
+{{/if}}
