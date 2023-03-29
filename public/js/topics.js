@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-//   const topicLinks = document.querySelectorAll('.topic');
-=======
 const topicLinks = document.querySelectorAll('.topic');
->>>>>>> 04cf8962975a5fc0e3e9af4302ffbf6ac9b1bc33
 
 // topicLinks.forEach((link) => {
 //   link.addEventListener('click', async (event) => {
