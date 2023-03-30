@@ -16,4 +16,4 @@ const topicLinks = document.querySelectorAll('.post-card');
 //   });
 // });
 
-document.querySelector('#form-signup').addEventListener('submit', signUpFormHandler)
+document.querySelector('.post-card').addEventListener('submit', signUpFormHandler)

@@ -1,5 +1,6 @@
 {{#if forumposts.length}}
   {{#each forumposts}}
+  <a href="/api/forumpost/topic/thread/{{this.id}}">
     <div class="post-card">
       <div class="title-card">
         <p>{{this.topic}}</p>
@@ -9,6 +10,7 @@
         <p>{{this.content}}</p>
       </div>
     </div>
+    </a>
   {{/each}}
 {{else}}
   <p>No posts found.</p>
