@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Forumpost, Reply } = require('../../models');
+const { Forumpost, Reply, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
@@ -7,11 +7,13 @@ router.get('/topic/:topic', async (req, res) => {
   try {
     const forumpostData = await Forumpost.findAll({
       where: {
-        topic: req.params.topic,
+        topic: req.params.topic
       },
+      include: { model: User, attributes: ['name', 'avatar'] }
     });
 
     const forumposts = forumpostData.map((forumpost) => forumpost.get({ plain: true }));
+    console.log(forumposts)
 const topic = req.params.topic
     res.render('topic', {
       forumposts,
@@ -28,13 +30,23 @@ router.get('/topic/thread/:post_id', async (req, res) => {
     // Find the Forumpost with the given post_id
     const forumpostData = await Forumpost.findByPk(req.params.post_id);
     const forumpost = forumpostData.get({ plain: true });
-    // Find all Replies associated with the Forumpost
-    const replyData = await Reply.findAll({ where: { post_id: req.params.post_id } });
-    const replies = replyData.map((reply) => reply.get({ plain: true }));
-console.log(forumpost)
+
+    // Find all Replies associated with the Forumpost, including the User model
+    const replyData = await Reply.findAll({
+      where: { post_id: req.params.post_id },
+      include: { model: User, attributes: ['name', 'avatar'] }
+    });
+    const replies = replyData.map((reply) => {
+      const plainReply = reply.get({ plain: true });
+      // Check if the User data exists for this Reply
+      if (plainReply.User) {
+        plainReply.User = plainReply.User.get({ plain: true });
+      }
+      return plainReply;
+    });
 console.log(replies)
     // Render the "thread" view with the Forumpost and its Replies as context
-    res.render('thread', { forumpost, replies,logged_in: req.session.logged_in });
+    res.render('thread', { forumpost, replies, logged_in: req.session.logged_in });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Server error' });
@@ -42,11 +54,11 @@ console.log(replies)
 });
 
 router.post('/create', async (req, res) => {
-  console.log(req.body)
   try {
-    const newForumpost = await Forumpost.create(req.body
-
-    );
+    const newForumpost = await Forumpost.create({
+      ...req.body,
+      user_id: req.session.user_id // set user_id to req.session.user_id
+    });
 
     res.status(200).json(newForumpost);
   } catch (err) {

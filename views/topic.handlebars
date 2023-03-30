@@ -1,26 +1,14 @@
 <!-- Updated HTML markup with a new form for creating a topic -->
-{{#if forumposts.length}}
-  {{#each forumposts}}
-    <a href="/api/forumpost/topic/thread/{{this.id}}">
-      <div class="post-card">
-        <div class="title-card">
-          <p>{{this.topic}}</p>
-          <p>{{this.date_created}}</p>
-        </div>
-        <div class="description-card">
-          <p>{{this.content}}</p>
-        </div>
-      </div>
-    </a>
-  {{/each}}
-{{else}}
-  <p>No posts found.</p>
-{{/if}}
+{{#if logged_in}}
+<div class="create-post">
+  <h1>Create post</h1>
+</div>
 
 <form class="create-form">
-  <div class="form-group">
-    <label for="topic-content">Content</label>
-    <input class="topic-content" type="text" id="topic-content" />
+<div class="form-group">
+  <label for="topic-content">Content</label>
+  <textarea class="topic-content" id="topic-content" rows="4" cols="50"></textarea>
+</div>
   </div>
   <div class="form-group">
     <label for="title-content">title</label>
@@ -30,6 +18,26 @@
     <button class="btn btn-primary" type="submit">Submit</button>
   </div>
 </form>
+{{/if}}
+{{#if forumposts.length}}
+  {{#each forumposts}}
+    <a href="/api/forumpost/topic/thread/{{this.id}}">
+      <div class="post-card">
+        <div class="title-card">
+          
+          <p>{{this.topic}}</p>
+          <p>{{this.date_created}}</p>
+        </div>
+        <div class="description-card">
+          <img class="reply-img" src="{{#if user.avatar}}{{user.avatar}}{{else}}/uploads/1678754877983393.gif{{/if}}" alt="Avatar">
+          <p>{{this.content}}</p>
+        </div>
+      </div>
+    </a>
+  {{/each}}
+{{else}}
+  <p>No posts found.</p>
+{{/if}}
 
 <!-- Updated JavaScript code to handle form submission -->
 
