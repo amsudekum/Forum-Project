@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
-const { Forumpost, User  } = require('../models');
+const { Forumpost, User, Reply } = require('../models');
 
 const userData = require('./userData.json');
 const ArticleData = require('./ArticleData.json');
+const replies = require('./replyData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -16,6 +17,13 @@ const seedDatabase = async () => {
     await Forumpost.create({
       ...forumpost,
       user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
+  for (const reply of replies) {
+    await Reply.create({
+      ...reply,
+      author: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 

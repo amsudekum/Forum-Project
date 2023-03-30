@@ -1,0 +1,22 @@
+ <div class="post-card">
+      <div class="title-card">
+        <p>{{forumpost.topic}}</p>
+        <p>{{forumpost.date_created}}</p>
+      </div>
+      <div class="description-card">
+        <p>{{forumpost.content}}</p>
+      </div>
+    </div>
+
+  {{#each replies}}
+ <div class="post-card">
+      <div class="title-card">
+        <p>{{this.author}}</p>
+        <p>{{this.date_created}}</p>
+      </div>
+      <div class="description-card">
+        <p>{{this.content}}</p>
+      </div>
+    </div>
+  {{/each}}
+</ul>
