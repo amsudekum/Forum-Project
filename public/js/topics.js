@@ -1,4 +1,4 @@
-const topicLinks = document.querySelectorAll('.topic');
+const topicLinks = document.querySelectorAll('.post-card');
 
 // topicLinks.forEach((link) => {
 //   link.addEventListener('click', async (event) => {
@@ -15,3 +15,5 @@ const topicLinks = document.querySelectorAll('.topic');
 //     }
 //   });
 // });
+
+document.querySelector('#form-signup').addEventListener('submit', signUpFormHandler)
