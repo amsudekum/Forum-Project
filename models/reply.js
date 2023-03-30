@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection'); 
+const User = require('./user'); // import the User model
 
 class Reply extends Model {}
 
@@ -42,6 +43,7 @@ Reply.init(
         underscored: true, 
         modelName: 'Reply'
     }
-); 
+);
 
-module.exports = Reply; 
+
+module.exports = Reply;
