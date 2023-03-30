@@ -1,0 +1,46 @@
+:root {
+    --grey: #C2CCCD;
+    --white: #F7F7F7;
+    --blue: #5E7B83;
+    --gold: #D2AF6F;
+    --copper: #9D7B56;
+}
+
+/* font-family: 'Playfair Display', serif;
+font-family: 'Montserrat', sans-serif; */
+
+.navbar {
+    background-color: var(--blue);
+}
+
+.navbar h1 {
+    font-family: 'Playfair Display', serif; 
+    color: var(--white); 
+    font-size: 4vw;
+}
+
+.navbar li {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    float: left;
+	width: 6vw;
+    padding-left: 2vw;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: var(--white);
+}
+
+.sidebar-container {
+    background-color: var(--gold);
+}
+
+.list-group-item-primary {
+    background-color: var(--copper) !important;
+    color: black;
+}
+
+ body {
+    overflow-x: hidden;
+ }
