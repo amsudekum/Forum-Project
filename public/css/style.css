@@ -92,3 +92,6 @@ font-family: 'Montserrat', sans-serif; */
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.293);
 }
+.login-tags{
+    margin-inline: 10px;
+}
