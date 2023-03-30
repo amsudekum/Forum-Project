@@ -1,0 +1,18 @@
+
+
+      {{#if user.dataValues.avatar}}
+ <div class="profile-img-container">
+<img class="profile-img"  src="/uploads/{{user.dataValues.avatar}}">
+</div>
+<div class="welcome-tag">
+<p class="welcome-text">welcome,{{user.dataValues.name}}</p>
+</div>
+
+        {{else}}
+<form action="api/user/upload" method="post" enctype="multipart/form-data">
+  <label for="file">Select an image to upload:</label>
+  <input type="file" id="file" name="file">
+  <button type="submit">Upload</button>
+</form>
+
+        {{/if}}

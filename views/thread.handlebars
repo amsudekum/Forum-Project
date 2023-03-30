@@ -1,6 +1,6 @@
  <div class="post-card">
       <div class="title-card">
-        <p>{{forumpost.topic}}</p>
+        <p >{{forumpost.topic}}</p>
         <p>{{forumpost.date_created}}</p>
       </div>
       <div class="description-card">
@@ -8,15 +8,15 @@
       </div>
     </div>
 
-  {{#each replies}}
- <div class="post-card">
-      <div class="title-card">
-        <p>{{this.author}}</p>
-        <p>{{this.date_created}}</p>
-      </div>
-      <div class="description-card">
-        <p>{{this.content}}</p>
-      </div>
+{{#each replies}}
+  <div class="post-card">
+    <div class="title-card">
+      <img class="reply-img" src="/uploads/1678754877983393.gif" alt="User Avatar">
+      <p>{{this.author}}</p>
+      <p>{{this.date_created}}</p>
     </div>
-  {{/each}}
-</ul>
+    <div class="description-card">
+      <p>{{this.content}}</p>
+    </div>
+  </div>
+{{/each}}

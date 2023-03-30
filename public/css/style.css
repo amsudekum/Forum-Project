@@ -14,11 +14,13 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .navbar h1 {
+
+}
+.nav-logo{
     font-family: 'Playfair Display', serif; 
     color: var(--white); 
-    font-size: 4vw;
+    font-size: 2vw;
 }
-
 .navbar li {
     font-family: 'Montserrat', sans-serif;
     display: block;
@@ -30,6 +32,7 @@ font-family: 'Montserrat', sans-serif; */
 
 .navbar a {
     color: var(--white);
+    font-size: larger;
 }
 .main-board{
     display: flex;
@@ -61,6 +64,7 @@ font-family: 'Montserrat', sans-serif; */
     border-radius: 4px;
     color:var(--blue);
     font-size: larger;
+    background-color: #5e7b8338;
 
 }
 .topic:hover{
@@ -75,6 +79,7 @@ font-family: 'Montserrat', sans-serif; */
     flex-direction: column;
     align-items: center;
 }
+
 .title-card{
     display: flex;
     justify-content: space-between;
@@ -94,4 +99,60 @@ font-family: 'Montserrat', sans-serif; */
 }
 .login-tags{
     margin-inline: 10px;
+}
+.title-card > * {
+    margin: 10px;
+  }
+.description-card > * {
+    margin: 10px;
+}
+.profile-img-container{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.profile-img{
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+}
+.welcome-tag{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.welcome-text{
+    font-size: larger;
+}
+.reply-img{
+   position: relative;
+   left: -90px;
+   bottom: 0px;
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%;
+    
+}
+.create-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: inset;
+    border-color: rgba(0, 0, 0, 0.293);
+    background-color: bisque;
+    
+
+}
+.form-group{
+    margin-inline: 10px;
+    margin-top: 10px;
+
+}
+.create-post{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    color: var(--blue);
 }
