@@ -25,11 +25,11 @@
       <div class="post-card">
         <div class="title-card">
           
-          <p>{{this.topic}}</p>
+          <p>{{this.post_title}}  -  {{this.topic}} </p>
           <p>{{this.date_created}}</p>
         </div>
         <div class="description-card">
-          <img class="reply-img" src="{{#if user.avatar}}{{user.avatar}}{{else}}/uploads/1678754877983393.gif{{/if}}" alt="Avatar">
+          <img class="reply-img" {{#if User.avatar}} src="/uploads/{{User.avatar}}" {{else}}src="/uploads/1678754877983393.gif"{{/if}} alt="Avatar">
           <p>{{this.content}}</p>
         </div>
       </div>

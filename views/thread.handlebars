@@ -1,3 +1,18 @@
+ {{#if logged_in}}
+<div class="create-post">
+  <h1>Create Reply</h1>
+</div>
+
+<form class="create-form">
+<div class="form-group">
+  <label for="topic-content">Content</label>
+  <textarea class="topic-content" id="topic-content" rows="4" cols="50"></textarea>
+</div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
+{{/if}}
  <div class="post-card">
       <div class="title-card">
         <p >{{forumpost.topic}}</p>
@@ -11,12 +26,38 @@
 {{#each replies}}
   <div class="post-card">
     <div class="title-card">
-      <img class="reply-img" src="/uploads/1678754877983393.gif" alt="User Avatar">
+      
       <p>{{this.author}}</p>
       <p>{{this.date_created}}</p>
     </div>
     <div class="description-card">
+   <img class="reply-img" {{#if User.avatar}} src="/uploads/{{User.avatar}}" {{else}}src="/uploads/1678754877983393.gif"{{/if}} alt="Avatar">
       <p>{{this.content}}</p>
     </div>
   </div>
 {{/each}}
+
+<script>
+
+  const createForm = document.querySelector('.create-form');
+
+  createForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const content = document.querySelector('#topic-content').value;
+    const post_id = {{forumpost.id}}
+
+    const response = await fetch('/api/forumpost/create/reply', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content, post_id }),
+    });
+
+    if (response.ok) {
+      // Reload the page to display the new topic
+      window.location.reload();
+    } else {
+      console.error('Failed to create new topic:', response.status);
+    }
+  });
+</script>
