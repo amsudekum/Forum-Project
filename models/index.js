@@ -3,12 +3,12 @@ const Forumpost = require('./Forumpost');
 const Reply = require('./Reply');
 
 User.hasMany(Forumpost, {
-  foreignKey: 'user_id',
+  foreignKey: 'author',
   onDelete: 'CASCADE'
 });
 
 Forumpost.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'author'
 });
 
 Forumpost.hasMany(Reply, {
@@ -21,12 +21,13 @@ Reply.belongsTo(Forumpost, {
 });
 
 User.hasMany(Reply, {
-  foreignKey: 'author_id',
+  foreignKey: 'author',
   onDelete: 'CASCADE'
 });
 
 Reply.belongsTo(User, {
-  foreignKey: 'author_id'
+  foreignKey: 'author'
+
 });
 
 module.exports = { User, Forumpost, Reply };

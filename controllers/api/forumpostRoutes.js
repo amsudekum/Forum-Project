@@ -36,14 +36,7 @@ router.get('/topic/thread/:post_id', async (req, res) => {
       where: { post_id: req.params.post_id },
       include: { model: User, attributes: ['name', 'avatar'] }
     });
-    const replies = replyData.map((reply) => {
-      const plainReply = reply.get({ plain: true });
-      // Check if the User data exists for this Reply
-      if (plainReply.User) {
-        plainReply.User = plainReply.User.get({ plain: true });
-      }
-      return plainReply;
-    });
+    const replies = replyData.map((reply) => reply.get({ plain: true }));
 console.log(replies)
     // Render the "thread" view with the Forumpost and its Replies as context
     res.render('thread', { forumpost, replies, logged_in: req.session.logged_in });
@@ -55,12 +48,23 @@ console.log(replies)
 
 router.post('/create', async (req, res) => {
   try {
+    console.log(req.body)
     const newForumpost = await Forumpost.create({
       ...req.body,
-      user_id: req.session.user_id // set user_id to req.session.user_id
+      author: req.session.user_id // set user_id to req.session.user_id
     });
 
     res.status(200).json(newForumpost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.post('/create/reply', async (req, res) => {
+  try {
+    const newReply = await Reply.create(req.body);
+
+    res.status(200).json(newReply);
   } catch (err) {
     res.status(400).json(err);
   }

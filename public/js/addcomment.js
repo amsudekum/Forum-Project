@@ -7,7 +7,7 @@ const commentFormHandler = async (event) => {
         window.location.toString().split('/').length - 1];
     
     if(comment_text){
-        const respone = await fetch('/api/comments', {
+        const response = await fetch('/api/comments', {
             method: 'POST',
             body: JSON.stringify({ post_id, comment_text })
         }

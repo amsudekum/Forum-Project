@@ -13,9 +13,6 @@ font-family: 'Montserrat', sans-serif; */
     background-color: var(--blue);
 }
 
-.navbar h1 {
-
-}
 .nav-logo{
     font-family: 'Playfair Display', serif; 
     color: var(--white); 
@@ -145,6 +142,16 @@ font-family: 'Montserrat', sans-serif; */
     
 
 }
+#form-signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: inset;
+    border-color: rgba(0, 0, 0, 0.293);
+    background-color: bisque;
+    
+}
 .form-group{
     margin-inline: 10px;
     margin-top: 10px;
@@ -155,4 +162,12 @@ font-family: 'Montserrat', sans-serif; */
     justify-content: center;
     background-color: bisque;
     color: var(--blue);
+}
+.text-center{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    color: var(--blue);
+    margin: 0px;
+    padding: 7px;
 }
